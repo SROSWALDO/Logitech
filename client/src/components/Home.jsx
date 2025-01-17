@@ -8,7 +8,7 @@ export default function Home() {
       <Navbar />
 
       <header className="bg-[#32176D] w-full h-[530px] relative">
-        <nav className="flex px-40 pt-6 justify-between z-[100] relative">
+        <nav className="flex px-40 pt-5 justify-between z-[100] relative">
           <div>
             <img className="w-32" src={logitech} alt="" />
           </div>
@@ -29,8 +29,14 @@ export default function Home() {
 
         </nav>
 
-        <div>
-          <h2 className="text-3xl text-white font-semibold">NUEVO AÑO, NUEVO EQUIPO</h2>
+        <div className="mt-16 ml-[158px]">
+          <h2 className="text-5xl text-white font-semibold w-[390px] ">NUEVO AÑO, NUEVO EQUIPO</h2>
+          <p className="text-white text-xl mt-5">¡ Empieza el año ahorrando !</p>
+          <p className="text-white text-xl mt-5 font-semibold">20% de descuento en todos nuestros productos</p>
+          <p className="text-white text-sm mt-3 font-light">Oferta por tiempo limitado. <span className="font-semibold">Aplican Exclusiónes*</span></p>
+
+          <button className="uppercase bg-white p-4 px-9 mt-4 text-[14px] font-semibold ">Compra ahora</button>
+
         </div>
 
         <img className="absolute w-[890px] h-full top-0 right-0 z-10 object-cover object-left " style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }} src={banner} alt="" />
