@@ -40,7 +40,7 @@ export default function Products() {
 
       <div className="flex justify-between flex-wrap mt-5 w-full px-32  ">
         {productsPaginates.map((product) => (
-          <div key={product.id}>
+          <div className="flex flex-col justify-between" key={product.id}>
             <div className="w-[380px] flex items-center h-[350px] bg-slate-100 m-1 mt-5 ">
               <img className=" " src={product.image} alt="" />
             </div>
@@ -59,7 +59,7 @@ export default function Products() {
             </div>
 
             <div>
-              <h1 className="font-semibold uppercase mt-5 text-lg">
+              <h1 className="font-semibold uppercase mt-5 text-lg flex-1 ">
                 {product.name}
               </h1>
               <p className="w-[370px] font-light text-gray-500 text-sm mt-5 ">
