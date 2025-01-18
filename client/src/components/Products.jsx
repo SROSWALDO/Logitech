@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../store/actions";
+import prev from '../assets/prev.svg'
+import next from '../assets/next.svg'
 
 export const colors = {
   blanco: "#ffffff",
@@ -68,6 +70,17 @@ export default function Products() {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center items-center mt-5 mb-2">
+        <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1) } className="bg-black p-1 rounded-full">
+          <img className="w-7" src={prev} alt="" />
+        </button>
+        <p className="mx-3 text-xl">{currentPage}</p>
+        <button disabled={currentPage > products.length / productsForPage} onClick={() => setCurrentPage(currentPage + 1) } className="bg-black p-1 rounded-full">
+          <img className="w-7" src={next} alt="" />
+        </button>
+      </div>
+
     </div>
   );
 }
