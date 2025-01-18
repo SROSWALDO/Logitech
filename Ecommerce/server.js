@@ -10,7 +10,7 @@ app.use(cors());
 let products = [
   {
     id: 1,
-    name: "Logitech G Pro X Superlight Wireless",
+    name: "Logitech G Pro X Superlight",
     price: 3000,
     variants: [
       { color: "blanco", stock: 10 },
@@ -208,7 +208,7 @@ let products = [
       { color: "blanco", stock: 4 },
     ],
     image:
-      "https://resource.logitech.com/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png",
+      "https://resource.logitech.com/content/dam/gaming/en/products/g515-lightspeed-tkl/gallery/g515-keyboard-black-gallery-1-us.png",
     description:
       "Interruptores híbridos LIGHTFORCE, inalámbricos de calidad profesional, RGB",
     category: "keyboards",
@@ -221,7 +221,7 @@ let products = [
       { color: "negro", stock: 4 },
       { color: "blanco", stock: 4 },
     ],
-    image: "https://images.evga.com/products/gallery/100-W1-0600-K1_XL_1.jpg",
+    image: "https://resource.logitech.com/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png",
     description:
       "interruptores híbridos LIGHTFORCE, tecnología inalámbrica LIGHTSPEED de nivel profesional, RGB LIGHTSYNC",
     category: "mouse",

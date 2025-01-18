@@ -13,13 +13,14 @@ import {
 export default function Navbar() {
   return (
     <div className="w-full h-16 flex justify-between shadow-md px-16 items-center">
+    
       <div className="flex items-center ">
         <img className="w-48" src={banner} alt="" />
-        <Menu className="bg-white">
+        <Menu className="bg-white z-50">
           <MenuHandler className="cursor-pointer text-gray-500 text-sm border-none">
             <p className="text-gray-500 text-sm ">Nuestras marcas</p>
           </MenuHandler>
-          <MenuList className="bg-white-500 w-[130px] mt-4 border-none bg-white">
+          <MenuList className="bg-white-500 w-[130px] mt-4 border-none bg-white z-50">
             <MenuItem className="p-2 mt-1">
               <img className="w-14 opacity-50 hover:opacity-100 m-auto " src={astro}/>
             </MenuItem>
