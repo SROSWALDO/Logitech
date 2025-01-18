@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../store/actions";
-import prev from '../assets/prev.svg'
-import next from '../assets/next.svg'
+import prev from "../assets/prev.svg";
+import next from "../assets/next.svg";
 
 export const colors = {
   blanco: "#ffffff",
@@ -18,11 +18,11 @@ export default function Products() {
   const products = useSelector((state) => state.products);
 
   //? Pagination
-  const productsForPage = 6
-  const [currentPage, setCurrentPage] = useState(1)
+  const productsForPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
   const startIndex = (currentPage - 1) * productsForPage;
   const endIndex = startIndex + productsForPage;
-  const productsPaginates = products.slice(startIndex,endIndex)
+  const productsPaginates = products.slice(startIndex, endIndex);
 
   useEffect(() => {
     dispatch(getProducts());
@@ -65,22 +65,36 @@ export default function Products() {
               <p className="w-[370px] font-light text-gray-500 text-sm mt-5 ">
                 {product.description}
               </p>
-              <p className="mt-5 font-semibold text-xl">${product.price}</p>
+              <p className="mt-5 font-semibold text-xl">
+                $
+                {product.price.toString().length > 3
+                  ? product.price.toString().slice(0, -3) +
+                    "," +
+                    product.price.toString().slice(-3)
+                  : product.price}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       <div className="flex justify-center items-center mt-5 mb-2">
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1) } className="bg-black p-1 rounded-full">
+        <button
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}
+          className="bg-black p-1 rounded-full"
+        >
           <img className="w-7" src={prev} alt="" />
         </button>
         <p className="mx-3 text-xl">{currentPage}</p>
-        <button disabled={currentPage > products.length / productsForPage} onClick={() => setCurrentPage(currentPage + 1) } className="bg-black p-1 rounded-full">
+        <button
+          disabled={currentPage > products.length / productsForPage}
+          onClick={() => setCurrentPage(currentPage + 1)}
+          className="bg-black p-1 rounded-full"
+        >
           <img className="w-7" src={next} alt="" />
         </button>
       </div>
-
     </div>
   );
 }
