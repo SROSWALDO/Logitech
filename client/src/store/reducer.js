@@ -1,5 +1,6 @@
 const initialState = {
-    products: []
+    products: [],
+    product: {}
 }
 
 export const reducer = (state = initialState, action) => {
@@ -9,6 +10,11 @@ export const reducer = (state = initialState, action) => {
             ...state,
             products: action.payload
         }
+        case "GET_PRODUCT":
+            return {
+                ...state,
+                product: action.payload
+            }
         default:
             return state
     }
