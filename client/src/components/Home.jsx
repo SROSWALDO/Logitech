@@ -5,8 +5,11 @@ import search from "../assets/search.svg";
 import user from "../assets/user.svg";
 import cart from "../assets/cart.svg";
 import Products from "./Products";
+import { Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
+import Cart from "./Cart";
 
 export default function Home() {
+
   return (
     <div className="w-full min-h-screen">
       <Navbar />
@@ -28,7 +31,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center z-[9999] ">
             <div className="w-[160px] bg-white/40 p-1 rounded-xl flex">
               <input
                 className="bg-transparent placeholder:text-white w-[120px] focus:outline-none "
@@ -38,7 +41,14 @@ export default function Home() {
               <img className="w-6" src={search} alt="search" />
             </div>
             <img className="mx-2 cursor-pointer " src={user} alt="user" />
-            <img className="ml-2 cursor-pointer " src={cart} alt="cart" />
+            <Popover placement="bottom"  className="z-[9999] " >
+              <PopoverHandler>
+                <img className="ml-2 cursor-pointer " src={cart} alt="cart" />
+              </PopoverHandler>
+              <PopoverContent>
+                <Cart/>
+              </PopoverContent>
+            </Popover>
           </div>
         </nav>
 
@@ -62,11 +72,15 @@ export default function Home() {
           </button>
         </div>
 
-        <img className="absolute w-[890px] h-full top-0 right-0 z-10 object-cover object-left " style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }} src={banner} alt="" />
+        <img
+          className="absolute w-[890px] h-full top-0 right-0  object-cover object-left "
+          style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }}
+          src={banner}
+          alt=""
+        />
       </header>
 
-      <Products/>
-
+      <Products />
     </div>
   );
 }
