@@ -25,7 +25,17 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 cart: action.payload
-            }       
+            }
+        case "DELETE_PRODUCT":
+            return {
+                ...state,
+                cart: state.cart.filter(product => !(product.productId === action.payload.productId && product.color === action.payload.color ) )
+            }
+        case "EDIT_PRODUCT":
+            return {
+                ...state,
+                cart: state.cart.map(product => product.productId === action.payload.productId && product.color === action.payload.color ? action.payload : product )
+            }               
         default:
             return state
     }

@@ -342,78 +342,74 @@ app.post("/cart", (req, res) => {
 });
 
 // PUT: Actualizar cantidad de un producto en el carrito
-app.put("/cart", (req, res) => {
-  const { productId, color, quantity } = req.body;
+app.put("/cart/:productId", (req, res) => {
+  const productId = parseInt(req.params.productId); // ID del producto desde la URL
+  const { color, quantity } = req.body; // Color y cantidad desde el cuerpo de la solicitud
 
-  const product = products.find((p) => p.id === productId);
-  if (!product) {
-    return res.status(404).json({ error: "Producto no encontrado" });
-  }
-
-  const variant = product.variants.find((v) => v.color === color);
-  if (!variant) {
-    return res.status(404).json({ error: "Color no disponible" });
-  }
-
+  // Buscar el producto en el carrito por `productId` y `color`
   const cartItem = cart.find(
     (item) => item.productId === productId && item.color === color
   );
+
   if (!cartItem) {
     return res
       .status(404)
       .json({ error: "Producto no encontrado en el carrito" });
   }
 
-  // Calcular la diferencia de cantidad
-  const quantityDifference = quantity - cartItem.quantity;
-
-  if (variant.stock < quantityDifference) {
-    return res
-      .status(400)
-      .json({ error: "Stock insuficiente para actualizar" });
-  }
-
-  // Actualizar la cantidad en el carrito
-  cartItem.quantity = quantity;
-
-  // Actualizar el stock del producto
-  variant.stock -= quantityDifference;
-
-  res.json(cart);
-});
-
-// DELETE: Eliminar producto del carrito
-app.delete("/cart", (req, res) => {
-  const { productId, color } = req.body;
-
+  // Buscar el producto en la lista de productos
   const product = products.find((p) => p.id === productId);
   if (!product) {
     return res.status(404).json({ error: "Producto no encontrado" });
   }
 
+  // Buscar la variante específica del producto basada en el color
   const variant = product.variants.find((v) => v.color === color);
   if (!variant) {
-    return res.status(404).json({ error: "Color no disponible" });
+    return res.status(404).json({ error: "Variante de producto no encontrada" });
   }
 
-  const cartIndex = cart.findIndex(
-    (item) => item.productId === productId && item.color === color
-  );
-  if (cartIndex === -1) {
-    return res
-      .status(404)
-      .json({ error: "Producto no encontrado en el carrito" });
+  // Calcular la diferencia en la cantidad
+  const quantityDifference = quantity - cartItem.quantity;
+
+  // Verificar si hay suficiente stock para la actualización
+  if (variant.stock < quantityDifference) {
+    return res.status(400).json({ error: "Cantidad insuficiente en stock" });
   }
 
-  // Devolver el stock al producto
-  const removedItem = cart[cartIndex];
-  variant.stock += removedItem.quantity;
+  // Actualizar la cantidad en el carrito y ajustar el stock del producto
+  cartItem.quantity = quantity;
+  variant.stock -= quantityDifference;
 
-  // Eliminar el producto del carrito
-  cart.splice(cartIndex, 1);
-
+  // Devolver el carrito actualizado
   res.json(cart);
 });
+
+
+// Ruta para eliminar un producto del carrito
+app.delete("/cart/:id", (req, res) => {
+  const productId = parseInt(req.params.id);
+  const { color } = req.body;
+
+  if (!color) {
+    return res.status(400).json({ error: "Se debe especificar el color del producto" });
+  }
+
+  // Buscar el producto en el carrito
+  const cartItemIndex = cart.findIndex(
+    (item) => item.productId === productId && item.color === color
+  );
+
+  if (cartItemIndex === -1) {
+    return res.status(404).json({ error: "Producto no encontrado en el carrito" });
+  }
+
+  // Eliminar el producto del carrito
+  cart.splice(cartItemIndex, 1);
+
+  res.json({ message: "Producto eliminado del carrito" });
+});
+
 
 // Servidor
 const PORT = 5000;
