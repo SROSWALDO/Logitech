@@ -94,7 +94,7 @@ export default function Products() {
         ))}
       </div>
 
-      <ProductDetail open={open} handleOpen={handleOpen} />
+      <ProductDetail open={open} handleOpen={handleOpen} setOpen={setOpen} />
 
       <div className="flex justify-center items-center mt-5 mb-2">
         <button

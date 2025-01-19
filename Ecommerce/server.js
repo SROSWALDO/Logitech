@@ -328,6 +328,7 @@ app.post("/cart", (req, res) => {
     cart.push({
       productId,
       name: product.name,
+      image: product.image,
       color,
       quantity,
       price: product.price,

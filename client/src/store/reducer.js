@@ -1,6 +1,7 @@
 const initialState = {
     products: [],
-    product: {}
+    product: {},
+    cart : []
 }
 
 export const reducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 product: action.payload
             }
+        case "ADD_TO_CART":
+            return {
+                ...state,
+                cart: action.payload
+            }    
         default:
             return state
     }

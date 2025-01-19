@@ -19,3 +19,14 @@ export const getProductById = (id) => async (dispatch) => {
     console.error(error.data.message);
   }
 }
+
+export const addToCart = (productData) => async (dispatch) => {
+  try {
+    const response = await axios.post(`${URL}/cart`, productData)
+    dispatch({ type: "ADD_TO_CART", payload: response.data })
+    return { success: true }
+  } catch (error) {
+    console.error(error.data.message);
+    return { success: false }
+  }
+}
