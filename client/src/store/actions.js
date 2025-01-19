@@ -30,3 +30,12 @@ export const addToCart = (productData) => async (dispatch) => {
     return { success: false }
   }
 }
+
+export const getCart = () => async (dispatch) => {
+  try {
+    const response = await axios.get(`${URL}/cart`)
+    dispatch({ type: "GET_CART", payload: response.data })
+  } catch (error) {
+    console.error(error.data.message);
+  }
+}

@@ -41,7 +41,7 @@ export default function Home() {
               <img className="w-6" src={search} alt="search" />
             </div>
             <img className="mx-2 cursor-pointer " src={user} alt="user" />
-            <Popover placement="bottom"  className="z-[9999] " >
+            <Popover placement="bottom"  className="z-[9999] max-h-[400px] " >
               <PopoverHandler>
                 <img className="ml-2 cursor-pointer " src={cart} alt="cart" />
               </PopoverHandler>

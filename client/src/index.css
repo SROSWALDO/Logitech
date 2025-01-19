@@ -9,3 +9,28 @@
 * {
     font-family: "Poppins", serif;  
 }
+
+/* Selecciona toda la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra vertical */
+    height: 12px; /* Altura de la barra horizontal */
+  }
+  
+  /* Fondo de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del track */
+    border-radius: 10px; /* Esquinas redondeadas */
+  }
+  
+  /* Color y estilo de la barra */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color de la barra */
+    border-radius: 10px; /* Esquinas redondeadas */
+    border: 2px solid #f1f1f1; /* Espacio entre la barra y el track */
+  }
+  
+  /* Color de la barra cuando se pasa el mouse encima */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color más oscuro al pasar el mouse */
+  }
+  
