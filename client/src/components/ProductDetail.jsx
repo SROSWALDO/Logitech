@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Dialog, DialogBody } from '@material-tailwind/react'
+import { Carousel, Dialog, DialogBody } from '@material-tailwind/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { colors } from './Products'
 import { addToCart } from '../store/actions'
@@ -46,8 +46,12 @@ export default function ProductDetail({ open, handleOpen, setOpen }) {
   return (
     <Dialog  open={open} handler={handleOpen} size='md' >
     <DialogBody className='flex items-center '>
-        <div>
-          <img className='w-[330px]' src={product.image} alt="" />
+        <div className=' bg-blue-gray-50 ' >
+          <Carousel autoplay={true} autoplayDelay={1000} loop >
+            {product?.images?.map((image,index) => (
+              <img className='w-[300px] h-[300px] object-cover pl-5 '  key={index} src={image.url} alt="" />
+            ))}
+          </Carousel>
         </div>
         <div>
           <h1 className='text-black font-semibold text-xl w-[300px] text-center mt-3'>{product.name}</h1>

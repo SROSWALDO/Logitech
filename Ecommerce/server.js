@@ -20,6 +20,14 @@ let products = [
       "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-6.png?v=1",
     description: "Mouse sensor HERO inalambrico superlight",
     category: "mouse",
+    images: [
+      {
+        url: "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-6.png?v=1",
+      },
+      {
+        url: "https://www.logitech-mexico.com/wp-content/uploads/2021/08/910-005941-1.jpg",
+      },
+    ],
   },
   {
     id: 2,
@@ -35,6 +43,17 @@ let products = [
     description:
       "Auriculares inalámbricos ligeros: lo suficientemente profesionales para la oficina y perfectos para trabajar desde casa",
     category: "headphones",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-vibe-100/gallery/zone-vibe-100-gallery-graphite-1.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-vibe-100/gallery/zone-vibe-100-gallery-white-1.png",
+      },
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/headsets/zone-vibe-100/gallery/zone-vibe-100-gallery-rose-1.png?v=1",
+      },
+    ],
   },
   {
     id: 3,
@@ -45,6 +64,11 @@ let products = [
       "https://resource.logitech.com/content/dam/logitech/en/products/webcams/mx-brio/buy/gallery/mx-brio-3qtr-front-right-graphite-gallery.png",
     description: "Cámara web Ultra HD 4K para colaboración y streaming",
     category: "webcams",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/webcams/mx-brio/buy/gallery/mx-brio-3qtr-front-right-graphite-gallery.png",
+      },
+    ],
   },
   {
     id: 4,
@@ -59,6 +83,17 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_944800-MLA74782534407_022024-O.webp",
     description: "Mouse mecanico inalámbrico switches RGB",
     category: "keyboards",
+    images: [
+      {
+        url: "https://http2.mlstatic.com/D_NQ_NP_944800-MLA74782534407_022024-O.webp",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/pro-x-tkl/gallery-2-pro-x-tkl-white-lightspeed-gaming-keyboard.png",
+      },
+      {
+        url: "https://resource.logitechg.com/d_transparent.gif/content/dam/gaming/en/products/pro-x-tkl-rapid/gallery/pro-x-tkl-rapid-magenta-gallery-1-us.png",
+      },
+    ],
   },
   {
     id: 5,
@@ -72,6 +107,14 @@ let products = [
       "https://resource.logitech.com/content/dam/gaming/en/products/refreshed-g203/g203-black-gallery-2.png",
     description: "Mouse Sensor RGB",
     category: "mouse",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/refreshed-g203/g203-black-gallery-2.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/refreshed-g203/g203-white-gallery-1.png",
+      },
+    ],
   },
   {
     id: 6,
@@ -86,6 +129,14 @@ let products = [
     description:
       "Estación base todo-en-uno con altavoces y controles para entrar en las reuniones con un toque",
     category: "speakers",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/logi-dock/logi-dock-uc-white-1.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/logi-dock/logi-dock-uc-graphite-1.png",
+      },
+    ],
   },
   {
     id: 7,
@@ -99,6 +150,14 @@ let products = [
       "https://resource.logitech.com/content/dam/astro/en/products/a50-headset-with-base-station-gen4/a50-gallery-ps4-01-refresh.png",
     description: "Auriculares gaming inalambricos Astro",
     category: "headphones",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/astro/en/products/a50-headset-with-base-station-gen4/a50-gallery-ps4-01-refresh.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/astro-a50-x/product-gallery/astro-a50-x-white-gallery-1.png",
+      },
+    ],
   },
   {
     id: 8,
@@ -113,6 +172,17 @@ let products = [
       "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-tkl-rapid/gallery/pro-x-tkl-rapid-black-gallery-1-us.png?v=1",
     description: "Teclado TKL switches mecanicos RGB",
     category: "keyboards",
+    images: [
+      {
+        url: "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-tkl-rapid/gallery/pro-x-tkl-rapid-black-gallery-1-us.png?v=1",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/pro-x-tkl-rapid/gallery/pro-x-tkl-rapid-white-gallery-1-pan.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/pro-x-tkl-rapid/gallery/pro-x-tkl-rapid-magenta-gallery-1-deu.png",
+      },
+    ],
   },
   {
     id: 9,
@@ -123,6 +193,11 @@ let products = [
       "https://resource.logitech.com/content/dam/logitech/en/products/speakers/z607/gallery/z607-gallery-1.png",
     description: "Sonido potente con Bluetooth",
     category: "speakers",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/speakers/z607/gallery/z607-gallery-1.png",
+      },
+    ],
   },
   {
     id: 10,
@@ -133,6 +208,11 @@ let products = [
       "https://resource.logitech.com/w_800,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/c920s/gallery/c920s-gallery-1.png?v=1",
     description: "Cámara web para streaming. 1080p superrápido a 30 fps",
     category: "webcams",
+    images: [
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/c920s/gallery/c920s-gallery-1.png?v=1",
+      },
+    ],
   },
   {
     id: 11,
@@ -146,6 +226,14 @@ let products = [
       "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png?v=1",
     description: "Auriculares lightspeed inalambricos",
     category: "headphones",
+    images: [
+      {
+        url: "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png?v=1",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-1-pro-x-2-lightspeed-gaming-headset-white.png",
+      },
+    ],
   },
   {
     id: 12,
@@ -160,6 +248,14 @@ let products = [
     description:
       "Teclado inalámbrico, equipado para el trabajo diario y el confort",
     category: "keyboards",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k650-signature-wireless-keyboard/gallery/k650-top-graphite-esp.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k650-signature-wireless-keyboard/gallery/k650-top-off-white-esp.png",
+      },
+    ],
   },
   {
     id: 13,
@@ -171,6 +267,11 @@ let products = [
     description:
       "Mouse inalábrico multidispositivo con desplazamiento ultra rápido",
     category: "mouse",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/mice/m720/gallery/m720-gallery-1a.png",
+      },
+    ],
   },
   {
     id: 14,
@@ -185,6 +286,14 @@ let products = [
     description:
       "Cámara con Full HD y USB-C para streaming de video en tiempo real y creación de contenido",
     category: "webcams",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/webcams/streamcam/gallery/streamcam-gallery-1-graphite.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/webcams/streamcam/gallery/streamcam-gallery-1-white.png",
+      },
+    ],
   },
   {
     id: 15,
@@ -198,6 +307,14 @@ let products = [
       "https://resource.logitech.com/content/dam/logitech/en/products/speakers/z207/gallery/z207-black-gallery-1.png",
     description: "Bocinas Bluetooth para Computadora",
     category: "speakers",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/speakers/z207/gallery/z207-black-gallery-1.png",
+      },
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_16:9,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/speakers/z207/gallery/z207-white-gallery-1.png?v=1",
+      },
+    ],
   },
   {
     id: 16,
@@ -212,6 +329,14 @@ let products = [
     description:
       "Interruptores híbridos LIGHTFORCE, inalámbricos de calidad profesional, RGB",
     category: "keyboards",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/g515-lightspeed-tkl/gallery/g515-keyboard-black-gallery-1-us.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/g515-lightspeed-tkl/gallery/g515-keyboard-white-gallery-1-us.png",
+      },
+    ],
   },
   {
     id: 17,
@@ -221,10 +346,19 @@ let products = [
       { color: "negro", stock: 4 },
       { color: "blanco", stock: 4 },
     ],
-    image: "https://resource.logitech.com/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png",
+    image:
+      "https://resource.logitech.com/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png",
     description:
       "interruptores híbridos LIGHTFORCE, tecnología inalámbrica LIGHTSPEED de nivel profesional, RGB LIGHTSYNC",
     category: "mouse",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png",
+      },
+      {
+        url: "https://resource.logitech.com/content/dam/gaming/en/products/g502x-corded/gallery/g502x-corded-gallery-1-white.png",
+      },
+    ],
   },
   {
     id: 18,
@@ -235,6 +369,11 @@ let products = [
       "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/non-braid/crush-powerplay/powerplay-gallery-2-nb.png?v=1",
     description: "Sistema inalambrico de carga",
     category: "mousepad",
+    images: [
+      {
+        url: "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/non-braid/crush-powerplay/powerplay-gallery-2-nb.png?v=1",
+      },
+    ],
   },
   {
     id: 19,
@@ -250,6 +389,17 @@ let products = [
     description:
       "Una cámara web de 1080p con corrección de iluminación automática, micrófono con reducción de ruido y conectividad USB-C",
     category: "webcams",
+    images: [
+      {
+        url: "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/brio-300/gallery/brio-300-gallery-offwhite-2.png?v=1",
+      },
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_16:9,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/brio-300/gallery/brio-300-gallery-graphite-1.png?v=1",
+      },
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_16:9,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/brio-300/gallery/brio-300-gallery-rose-1.png?v=1",
+      },
+    ],
   },
   {
     id: 20,
@@ -264,6 +414,14 @@ let products = [
     description:
       "Trackball inalámbrico accionado con el pulgar, para confort prolongado",
     category: "mouse",
+    images: [
+      {
+        url: "https://resource.logitech.com/content/dam/logitech/en/products/mice/ergo-m575/gallery/ergo-m575-gallery-black-1-new.png",
+      },
+      {
+        url: "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/ergo-m575/gallery/ergo-m575-gallery-off-white-1-new.png?v=1",
+      },
+    ],
   },
 ];
 
@@ -366,7 +524,9 @@ app.put("/cart/:productId", (req, res) => {
   // Buscar la variante específica del producto basada en el color
   const variant = product.variants.find((v) => v.color === color);
   if (!variant) {
-    return res.status(404).json({ error: "Variante de producto no encontrada" });
+    return res
+      .status(404)
+      .json({ error: "Variante de producto no encontrada" });
   }
 
   // Calcular la diferencia en la cantidad
@@ -385,14 +545,15 @@ app.put("/cart/:productId", (req, res) => {
   res.json(cart);
 });
 
-
 // Ruta para eliminar un producto del carrito
 app.delete("/cart/:id", (req, res) => {
   const productId = parseInt(req.params.id);
   const { color } = req.body;
 
   if (!color) {
-    return res.status(400).json({ error: "Se debe especificar el color del producto" });
+    return res
+      .status(400)
+      .json({ error: "Se debe especificar el color del producto" });
   }
 
   // Buscar el producto en el carrito
@@ -401,7 +562,9 @@ app.delete("/cart/:id", (req, res) => {
   );
 
   if (cartItemIndex === -1) {
-    return res.status(404).json({ error: "Producto no encontrado en el carrito" });
+    return res
+      .status(404)
+      .json({ error: "Producto no encontrado en el carrito" });
   }
 
   // Eliminar el producto del carrito
@@ -409,7 +572,6 @@ app.delete("/cart/:id", (req, res) => {
 
   res.json({ message: "Producto eliminado del carrito" });
 });
-
 
 // Servidor
 const PORT = 5000;
