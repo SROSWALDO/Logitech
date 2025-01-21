@@ -65,3 +65,14 @@ export const updatedProduct = (id, productData) => async (dispatch) => {
     console.error(error.data.message);
   }
 };
+
+export const filterByCategory = (category) => (dispatch, getState) => {
+  try {
+    const { products_copy } = getState();
+    const productsToFilter = [...products_copy]
+    const filteredProducts = category ? productsToFilter.filter(product => product.category === category) : filteredProducts
+    dispatch({ type: "FILTER_BY_CATEGORY", payload: filteredProducts })
+  } catch (error) {
+    console.error(error.data.message);
+  }
+}

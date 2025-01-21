@@ -46,8 +46,8 @@ export default function ProductDetail({ open, handleOpen, setOpen }) {
   return (
     <Dialog  open={open} handler={handleOpen} size='md' >
     <DialogBody className='flex items-center '>
-        <div className=' bg-blue-gray-50 ' >
-          <Carousel autoplay={true} autoplayDelay={1000} loop >
+        <div className=' bg-[#F1F5F9] ' >
+          <Carousel autoplay={true} autoplayDelay={1500}  >
             {product?.images?.map((image,index) => (
               <img className='w-[300px] h-[300px] object-cover pl-5 '  key={index} src={image.url} alt="" />
             ))}

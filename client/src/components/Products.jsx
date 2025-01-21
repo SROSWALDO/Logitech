@@ -5,6 +5,8 @@ import prev from "../assets/prev.svg";
 import next from "../assets/next.svg";
 import cart from "../assets/cart_add.svg";
 import ProductDetail from "./ProductDetail";
+import { Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
+import Filters from "./Filters";
 
 export const colors = {
   blanco: "#ffffff",
@@ -40,18 +42,30 @@ export default function Products() {
   }, [dispatch]);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#F7F9FC]">
       <div className="w-[90%] m-auto mt-5 ">
-        <div>
+        <div className="flex justify-between items-center">
           <div className="w-[110px] border-b-4 border-black ">
             <h1 className="uppercase font-semibold text-lg ">Novedades</h1>
           </div>
+
+          <div className="w-[70px]  transition-all cursor-pointer border-b-4  border-black ">
+          <Popover  placement="bottom" >
+            <PopoverHandler>
+            <h1 className="uppercase font-semibold text-lg  ">Filters</h1>
+            </PopoverHandler>
+            <PopoverContent className="shadow-2xl">
+              <Filters/>
+            </PopoverContent>
+          </Popover>
+          </div>
+
         </div>
       </div>
 
       <div className="flex justify-between flex-wrap mt-5 w-full px-32  ">
         {productsPaginates.map((product) => (
-          <div className="flex flex-col justify-between shadow p-1 " key={product.id}>
+          <div className="flex flex-col justify-between shadow p-1 bg-white " key={product.id}>
             <div className="w-[380px] flex items-center h-[350px] bg-slate-100 m-1 mt-5 ">
               <img className=" " src={product.image} alt="" />
             </div>

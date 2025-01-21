@@ -1,5 +1,6 @@
 const initialState = {
     products: [],
+    products_copy: [],
     product: {},
     cart : []
 }
@@ -9,7 +10,8 @@ export const reducer = (state = initialState, action) => {
         case "GET_PRODUCTS": 
         return {
             ...state,
-            products: action.payload
+            products: action.payload,
+            products_copy: action.payload
         }
         case "GET_PRODUCT":
             return {
@@ -35,7 +37,12 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 cart: state.cart.map(product => product.productId === action.payload.productId && product.color === action.payload.color ? action.payload : product )
-            }               
+            }
+        case "FILTER_BY_CATEGORY":
+            return {
+                ...state,
+                products: action.payload
+            }                   
         default:
             return state
     }
