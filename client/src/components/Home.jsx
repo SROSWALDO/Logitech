@@ -5,10 +5,17 @@ import search from "../assets/search.svg";
 import user from "../assets/user.svg";
 import cart from "../assets/cart.svg";
 import Products from "./Products";
-import { Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
+import { Menu, MenuHandler, MenuItem, MenuList, Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
 import Cart from "./Cart";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+
+  const products = useSelector(state => state.products)
+
+  const categories = Array.from(
+    new Set(products.map(product => product.category))
+  )
 
   return (
     <div className="w-full min-h-screen">
@@ -21,9 +28,22 @@ export default function Home() {
           </div>
 
           <div className="flex">
-            <p className="text-white uppercase font-semibold mx-5">
+          <Menu>
+          <MenuHandler>
+            <p className="text-white uppercase font-semibold mx-5 cursor-pointer">
               Conocer mas
             </p>
+          </MenuHandler>
+            <MenuList>
+            {categories.map((category, index) => (
+              <MenuItem key={index}>
+                <a href={`/categories/${category}`}>{category}</a>
+              </MenuItem>
+            ))}
+
+            </MenuList>
+          </Menu>
+            
             <p className="text-white uppercase font-semibold mx-5">Descubre</p>
             <p className="text-white uppercase font-semibold mx-5">Empresas</p>
             <p className="text-white uppercase font-semibold mx-5">
