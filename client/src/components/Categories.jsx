@@ -11,21 +11,17 @@ export default function Categories() {
 
   const { category } = useParams();
   const products = useSelector((state) => state.products);
-  const products_copy = useSelector((state) => state.products_copy);
 
   useEffect(() => {
-    if (products_copy.length === 0) {
       dispatch(getProducts());
-    }
-  }, [dispatch, products_copy]);
+  }, [dispatch]);
 
   useEffect(() => {
-    if (products_copy.length > 0 && category) {
+    if (products.length > 0 && category) {
       dispatch(filterByCategory(category));
     }
-  }, [category, dispatch, products_copy]);
-
-  console.log(products);
+  }, [category, dispatch, products]);
+  
   return (
     <div>
     <Navbar/>

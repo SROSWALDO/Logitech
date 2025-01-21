@@ -73,7 +73,7 @@ export const filterByCategory = (category) => (dispatch, getState) => {
     const filteredProducts = category ? productsToFilter.filter(product => product.category === category) : productsToFilter
     dispatch({ type: "FILTER_BY_CATEGORY", payload: filteredProducts })
   } catch (error) {
-    console.error(error.data.message);
+    console.error(error?.data?.message || error.message || "Error desconocido" );
   }
 }
 
