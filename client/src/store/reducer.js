@@ -42,7 +42,12 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 products: action.payload
-            }                   
+            }
+        case "ORDER_PRICE":
+            return {
+                ...state,
+                products: action.payload
+            }                       
         default:
             return state
     }

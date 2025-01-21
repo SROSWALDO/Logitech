@@ -69,9 +69,27 @@ export const updatedProduct = (id, productData) => async (dispatch) => {
 export const filterByCategory = (category) => (dispatch, getState) => {
   try {
     const { products_copy } = getState();
-    const productsToFilter = [...products_copy]
-    const filteredProducts = category ? productsToFilter.filter(product => product.category === category) : filteredProducts
+    let productsToFilter = [...products_copy]
+    const filteredProducts = category ? productsToFilter.filter(product => product.category === category) : productsToFilter
     dispatch({ type: "FILTER_BY_CATEGORY", payload: filteredProducts })
+  } catch (error) {
+    console.error(error.data.message);
+  }
+}
+
+export const orderByPrice = (order) => (dispatch, getState) => {
+  try {
+    const { products_copy } = getState();
+
+    let productsToOrder = [...products_copy]
+
+    if(order === 'desc') {
+      productsToOrder.sort((a,b) => a.price - b.price )
+    } else if (order === 'asc') {
+      productsToOrder.sort((a,b) => b.price - a.price)
+    }
+    dispatch({ type: "ORDER_PRICE", payload: productsToOrder })
+
   } catch (error) {
     console.error(error.data.message);
   }

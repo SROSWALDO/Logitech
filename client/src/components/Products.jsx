@@ -50,11 +50,11 @@ export default function Products() {
           </div>
 
           <div className="w-[70px]  transition-all cursor-pointer border-b-4  border-black ">
-          <Popover  placement="bottom" >
+          <Popover placement="bottom" >
             <PopoverHandler>
             <h1 className="uppercase font-semibold text-lg  ">Filters</h1>
             </PopoverHandler>
-            <PopoverContent className="shadow-2xl">
+            <PopoverContent className="shadow shadow-gray-400 border mt-1  ">
               <Filters/>
             </PopoverContent>
           </Popover>
